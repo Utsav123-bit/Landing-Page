@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #FF7EB9 0%, #FF65A3 25%, #7A9BFF 50%, #60CFFF 75%, #FF7EB9 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    font-size: 18px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+.content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 20;
+}
+
+.content h1 span {
+    color: #f39c12;
+}
+
+.content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #f1f1f1;
+}
+
+.content .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #f39c12;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 20;
+}
+
+.content .btn:hover {
+    background-color: #e67e22;
+}
+
+.socials {
+    margin-top: 40px;
+    size-adjust: auto;
+    position: relative;
+    z-index: 20;
+}
+
+.socials a {
+    margin: 0 10px;
+}
+
+.socials img {
+    width: 30px;
+    height: 30px;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+/* Background Shapes */
+.background-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.background-shapes::before, .background-shapes::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: moveShapes 20s infinite alternate ease-in-out;
+}
+
+.background-shapes::before {
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.2);
+    top: 10%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.background-shapes::after {
+    width: 700px;
+    height: 700px;
+    background: rgba(255, 255, 255, 0.1);
+    bottom: -20%;
+    right: -20%;
+    animation-delay: 5s;
+}
+
+@keyframes moveShapes {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(30px, 30px) rotate(360deg);
+    }
+}
